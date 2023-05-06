@@ -5,11 +5,15 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import { store } from "./store";
+import { StyleProvider } from "@ant-design/cssinjs";
+import "antd/dist/reset.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
-    <App />
+    <StyleProvider hashPriority="high">
+      <App />
+    </StyleProvider>
   </Provider>
 );
 
